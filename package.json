@@ -1,0 +1,39 @@
+{
+  "name": "spawn-but-with-promises",
+  "version": "0.1.0",
+  "description": "child_process.spawn but as a promise",
+  "keywords": [
+    "promise",
+    "child_process",
+    "spawn"
+  ],
+  "homepage": "https://github.com/CorySanin/spawn-but-with-promises#readme",
+  "bugs": {
+    "url": "https://github.com/CorySanin/spawn-but-with-promises/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorySanin/spawn-but-with-promises.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Cory Sanin",
+    "email": "corysanin@outlook.com",
+    "url": "https://sanin.dev/"
+  },
+  "type": "module",
+  "main": "distribution/src/index.js",
+  "files": [
+    "distribution"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.10.0",
+    "vitest": "4.0.7",
+    "@vitest/coverage-v8": "4.0.7"
+  }
+}
