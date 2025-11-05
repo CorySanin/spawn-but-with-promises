@@ -10,7 +10,8 @@
     "sourceMap": true,
     "inlineSources": true,
     "rootDir": "./",
-    "outDir": "./distribution"
+    "outDir": "./distribution",
+    "declaration": true,
   },
   "exclude": ["**/*.spec.ts", "distribution", "test"]
 }
