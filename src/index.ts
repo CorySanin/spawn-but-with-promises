@@ -39,7 +39,7 @@ interface ChildProcessWithoutNullStreamsAndPromise extends ChildProcessWithoutNu
 }
 
 interface SpawnPromiseOptions extends SpawnOptions {
-    rejectOnNonZero: boolean;
+    rejectOnNonZero?: boolean;
 }
 
 export default spawn;
