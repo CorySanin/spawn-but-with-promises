@@ -24,7 +24,8 @@
   "type": "module",
   "main": "distribution/src/index.js",
   "files": [
-    "distribution"
+    "distribution/src/**/*.js",
+    "distribution/src/**/*.d.ts"
   ],
   "scripts": {
     "build": "tsc",
