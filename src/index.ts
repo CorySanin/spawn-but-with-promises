@@ -1,6 +1,6 @@
 import { spawn as ogSpawn, type ChildProcessWithoutNullStreams, type SpawnOptions } from 'child_process';
 
-function spawn(command: string, args?: string[] | ReadonlyArray<string>, options?: SpawnPromiseOptions): ChildProcessWithoutNullStreamsAndPromise {
+export function spawn(command: string, args?: string[] | ReadonlyArray<string>, options?: SpawnPromiseOptions): ChildProcessWithoutNullStreamsAndPromise {
     const process = ogSpawn(command, args, options) as ChildProcessWithoutNullStreamsAndPromise;
     const promise = new Promise<number>((resolve, reject) => {
         process.on('close', code => {
@@ -24,7 +24,7 @@ function spawn(command: string, args?: string[] | ReadonlyArray<string>, options
     return process;
 }
 
-interface ChildProcessWithoutNullStreamsAndPromise extends ChildProcessWithoutNullStreams {
+export interface ChildProcessWithoutNullStreamsAndPromise extends ChildProcessWithoutNullStreams {
     promise: Promise<number>;
     then<TResult1 = number, TResult2 = never>(
         onfulfilled?: ((value: number) => TResult1 | PromiseLike<TResult1>) | null,
@@ -38,10 +38,8 @@ interface ChildProcessWithoutNullStreamsAndPromise extends ChildProcessWithoutNu
     finally(onfinally?: (() => void) | null): Promise<number>;
 }
 
-interface SpawnPromiseOptions extends SpawnOptions {
+export interface SpawnPromiseOptions extends SpawnOptions {
     rejectOnNonZero?: boolean;
 }
 
 export default spawn;
-export { spawn };
-export type { ChildProcessWithoutNullStreamsAndPromise, SpawnPromiseOptions };
