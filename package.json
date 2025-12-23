@@ -1,6 +1,6 @@
 {
   "name": "spawn-but-with-promises",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "child_process.spawn but as a promise",
   "keywords": [
     "promise",

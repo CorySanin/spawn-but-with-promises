@@ -5,7 +5,7 @@ export function spawn(command: string, args?: string[] | ReadonlyArray<string>, 
     const promise = new Promise<number>((resolve, reject) => {
         process.on('close', code => {
             if (options?.rejectOnNonZero && code !== 0) {
-                reject(new Error(`command exited with code ${code}`));
+                reject(new Error(`command \`${command}${args?.length ? ' ': ''}${args.join(' ')}\` exited with code ${code}`));
             }
             else {
                 resolve(typeof code === 'number' ? code : 0)

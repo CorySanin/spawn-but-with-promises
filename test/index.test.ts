@@ -44,7 +44,7 @@ describe('spawn-but-with-promises', () => {
     it('throws an error on non-zero exit code when rejectOnNonZero is true', async () => {
         await expect(spawn('false', [], {
             rejectOnNonZero: true
-        })).rejects.toThrow('command exited with code 1');
+        })).rejects.toThrow('command `false` exited with code 1');
     });
 
     it('allows handling promise with "then()"', () => new Promise<void>(done => {
@@ -76,12 +76,12 @@ describe('spawn-but-with-promises', () => {
     }));
 
     it('allows handling promise rejection with "catch()"', () => new Promise<void>(done => {
-        spawn('false', [], {
+        spawn('false', ['arg'], {
             rejectOnNonZero: true
         }).then(() => {
             expect.unreachable();
         }).catch((err: Error) => {
-            expect(err.message).to.be.equal('command exited with code 1');
+            expect(err.message).to.be.equal('command `false arg` exited with code 1');
             done();
         });
     }));
