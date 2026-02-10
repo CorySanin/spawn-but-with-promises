@@ -2,7 +2,7 @@
 
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/CorySanin/spawn-but-with-promises/test.yml)](https://github.com/CorySanin/spawn-but-with-promises/actions/workflows/test.yml) 
 [![GitHub License](https://img.shields.io/github/license/CorySanin/spawn-but-with-promises)](https://github.com/CorySanin/spawn-but-with-promises?tab=MIT-1-ov-file#readme) 
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/spawn-but-with-promises)](https://www.npmjs.com/package/spawn-but-with-promises) 
+[![NPM Downloads](https://img.shields.io/npm/dm/spawn-but-with-promises)](https://www.npmjs.com/package/spawn-but-with-promises) 
 [![NPM Type Definitions](https://img.shields.io/npm/types/spawn-but-with-promises)](https://www.npmjs.com/package/spawn-but-with-promises) 
 [![Dependency count](https://img.shields.io/badge/dependencies-0-yellow)](https://www.npmjs.com/package/spawn-but-with-promises?activeTab=dependencies) 
 
