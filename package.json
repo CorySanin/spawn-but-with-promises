@@ -1,6 +1,6 @@
 {
   "name": "spawn-but-with-promises",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "child_process.spawn but as a promise",
   "keywords": [
     "promise",
@@ -22,7 +22,14 @@
     "url": "https://sanin.dev/"
   },
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./distribution/src/index.d.ts",
+      "import": "./distribution/src/index.js"
+    }
+  },
   "main": "distribution/src/index.js",
+  "types": "./distribution/src/index.d.ts",
   "files": [
     "distribution/src/**/*.js",
     "distribution/src/**/*.d.ts"
@@ -32,9 +39,9 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "typescript": "5.9.3",
     "@types/node": "24.10.0",
-    "vitest": "4.0.7",
-    "@vitest/coverage-v8": "4.0.7"
+    "@vitest/coverage-v8": "4.0.7",
+    "typescript": "5.9.3",
+    "vitest": "4.0.7"
   }
 }
